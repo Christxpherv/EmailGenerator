@@ -1,4 +1,4 @@
-// functions to optomize view
+/* functions to optomize view */
 
 import SwiftUI
 

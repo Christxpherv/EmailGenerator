@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB554F9B2A06110600EA88A4 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB554F9A2A06110600EA88A4 /* InboxView.swift */; };
 		DB6F1B7A2A04702100DF65A0 /* EmailGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */; };
 		DB6F1B7C2A04702100DF65A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F1B7B2A04702100DF65A0 /* ContentView.swift */; };
 		DB6F1B7E2A04702100DF65A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6F1B7D2A04702100DF65A0 /* Assets.xcassets */; };
 		DB6F1B812A04702100DF65A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6F1B802A04702100DF65A0 /* Preview Assets.xcassets */; };
 		DBE49ABA2A0479280067F885 /* ViewFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE49AB92A0479280067F885 /* ViewFunctions.swift */; };
+		DBE4EFED2A54DE76002B6977 /* EmailGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4EFEC2A54DE76002B6977 /* EmailGen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB554F9A2A06110600EA88A4 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		DB6F1B762A04702100DF65A0 /* EmailGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailGeneratorApp.swift; sourceTree = "<group>"; };
 		DB6F1B7B2A04702100DF65A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB6F1B7D2A04702100DF65A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6F1B802A04702100DF65A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBE49AB92A0479280067F885 /* ViewFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFunctions.swift; sourceTree = "<group>"; };
+		DBE4EFEC2A54DE76002B6977 /* EmailGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailGen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			children = (
 				DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */,
 				DB6F1B7B2A04702100DF65A0 /* ContentView.swift */,
+				DB554F9A2A06110600EA88A4 /* InboxView.swift */,
 				DBE49AB92A0479280067F885 /* ViewFunctions.swift */,
+				DBE4EFEC2A54DE76002B6977 /* EmailGen.swift */,
 				DB6F1B7D2A04702100DF65A0 /* Assets.xcassets */,
 				DB6F1B7F2A04702100DF65A0 /* Preview Content */,
 			);
@@ -141,7 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE49ABA2A0479280067F885 /* ViewFunctions.swift in Sources */,
+				DB554F9B2A06110600EA88A4 /* InboxView.swift in Sources */,
 				DB6F1B7C2A04702100DF65A0 /* ContentView.swift in Sources */,
+				DBE4EFED2A54DE76002B6977 /* EmailGen.swift in Sources */,
 				DB6F1B7A2A04702100DF65A0 /* EmailGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
