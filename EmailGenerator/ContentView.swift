@@ -34,8 +34,15 @@ struct ContentView: View {
                                 
                                 /* button that serves the purpose of generating a random email address or changing an existing one */
                                 Button(action: {
-                                    email = EmailGenerator()
-                                    print(email)
+                                    print(emailDomain { domain, error in
+                                        if let error = error {
+                                            print("Error: \(error)")
+                                        } else if let domain = domain {
+                                            let remail = "\(EmailGenerator())\(domain)"
+                                            email = remail
+                                            
+                                        }
+                                    })
                                 }) {
                                     RoundedRectangle(cornerRadius: 15)
                                         .frame(width: 375, height: 75)
@@ -91,28 +98,9 @@ struct ContentView: View {
         }
     }
 }
-/* function that generates a random email */
-private func EmailGenerator() -> String {
-    let uuid = UUID().uuidString
-    let data = uuid.data(using: .utf8)!
-    let hash = SHA256.hash(data: data)
-    let hashString = hash.map { String(format: "%02hhx", $0) }.joined()
-    let truncatedHash = String(hashString.prefix(8))
-    return "\(truncatedHash)@example.com"
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
-
-
-
-/*
- to do list
- 
- 1) find out how to get one of the random domains from the emailGen view
- 2) find out how to set up inbox so that users can delete, refresh, and o
- 
- */

@@ -60,8 +60,8 @@
 				DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */,
 				DB6F1B7B2A04702100DF65A0 /* ContentView.swift */,
 				DB554F9A2A06110600EA88A4 /* InboxView.swift */,
-				DBE49AB92A0479280067F885 /* ViewFunctions.swift */,
 				DBE4EFEC2A54DE76002B6977 /* EmailGen.swift */,
+				DBE49AB92A0479280067F885 /* ViewFunctions.swift */,
 				DB6F1B7D2A04702100DF65A0 /* Assets.xcassets */,
 				DB6F1B7F2A04702100DF65A0 /* Preview Content */,
 			);
