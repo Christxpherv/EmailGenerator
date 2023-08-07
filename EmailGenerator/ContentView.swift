@@ -4,7 +4,6 @@ import CryptoKit
 struct ContentView: View {
     
     @State var email: String = "no active address"
-    @State var test: String = ""
     
     var body: some View {
         
