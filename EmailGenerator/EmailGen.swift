@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 import CryptoKit
 
 /* function to get domains */
@@ -48,4 +49,34 @@ func EmailGenerator() -> String {
     let hashString = hash.map { String(format: "%02hhx", $0) }.joined()
     let truncatedHash = String(hashString.prefix(8))
     return "\(truncatedHash)"
+}
+
+/* function that checks user's mailbox */
+func fetchEmails(apiKey: String, domain: String, completion: @escaping (Result<[String: Any], Error>) -> Void) {
+    /* FIXME: find the appropriate URL to retrieve the user's mail */
+    let apiUrl = "https://api.emailprovider.com/emails"
+    
+    let headers: HTTPHeaders = [
+        "Authorization": "Bearer \(apiKey)"
+    ]
+    
+    let parameters: Parameters = [
+        "domain": domain,
+        /* other parameters as needed */
+    ]
+    
+    AF.request(apiUrl, method: .get, parameters: parameters, headers: headers)
+        .validate()
+        .responseJSON { response in
+            switch response.result {
+            case .success(let data):
+                if let json = data as? [String: Any] {
+                    completion(.success(json))
+                } else {
+                    completion(.failure(NSError(domain: "ResponseError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response format"])))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
 }

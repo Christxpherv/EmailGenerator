@@ -3,8 +3,6 @@ import CryptoKit
 
 struct ContentView: View {
     
-    @State var email: String = "no active address"
-    
     var body: some View {
         
         NavigationView {

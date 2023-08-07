@@ -2,8 +2,6 @@ import SwiftUI
 
 struct InboxView: View {
     
-    @State var numEmails: Int = 0
-    
     var body: some View {
         
         VStack{
@@ -27,7 +25,9 @@ struct InboxView: View {
                             .frame(width: 350, height: 75)
                             .overlay(
                                 Button(action: {
-                                    // Add your email checking functionality here
+                                    /*
+                                    FIXME: add refresh functionallity here 
+                                    */
                                     print("Refresh button tapped")
                                 }) {
                                     Text("Refresh!")
@@ -42,6 +42,9 @@ struct InboxView: View {
                     ScrollView {
                             LazyVGrid(columns: [GridItem(.adaptive(minimum: 300))], spacing: 20) {
                                 ForEach(0..<numEmails, id: \.self) { emailIndex in
+                                    /*
+                                    FIXME: find out how to display specfiic information on each rectangle
+                                    */
                                     RoundedRectangle(cornerRadius: 20)
                                         .frame(width: 375, height: 145)
                                         .overlay(

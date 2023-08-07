@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0D26462A8133300066FF93 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0D26452A8133300066FF93 /* GlobalVariables.swift */; };
+		DB0D26492A8144CC0066FF93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DB0D26482A8144CC0066FF93 /* Alamofire */; };
 		DB554F9B2A06110600EA88A4 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB554F9A2A06110600EA88A4 /* InboxView.swift */; };
 		DB6F1B7A2A04702100DF65A0 /* EmailGeneratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */; };
 		DB6F1B7C2A04702100DF65A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F1B7B2A04702100DF65A0 /* ContentView.swift */; };
@@ -17,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0D26452A8133300066FF93 /* GlobalVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		DB554F9A2A06110600EA88A4 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		DB6F1B762A04702100DF65A0 /* EmailGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailGeneratorApp.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0D26492A8144CC0066FF93 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 		DB6F1B782A04702100DF65A0 /* EmailGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				DB0D26452A8133300066FF93 /* GlobalVariables.swift */,
 				DB6F1B792A04702100DF65A0 /* EmailGeneratorApp.swift */,
 				DB6F1B7B2A04702100DF65A0 /* ContentView.swift */,
 				DB554F9A2A06110600EA88A4 /* InboxView.swift */,
@@ -92,6 +97,9 @@
 			dependencies = (
 			);
 			name = EmailGenerator;
+			packageProductDependencies = (
+				DB0D26482A8144CC0066FF93 /* Alamofire */,
+			);
 			productName = EmailGenerator;
 			productReference = DB6F1B762A04702100DF65A0 /* EmailGenerator.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +128,9 @@
 				Base,
 			);
 			mainGroup = DB6F1B6D2A04702100DF65A0;
+			packageReferences = (
+				DB0D26472A8144CC0066FF93 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = DB6F1B772A04702100DF65A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0D26462A8133300066FF93 /* GlobalVariables.swift in Sources */,
 				DBE49ABA2A0479280067F885 /* ViewFunctions.swift in Sources */,
 				DB554F9B2A06110600EA88A4 /* InboxView.swift in Sources */,
 				DB6F1B7C2A04702100DF65A0 /* ContentView.swift in Sources */,
@@ -351,6 +363,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB0D26472A8144CC0066FF93 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB0D26482A8144CC0066FF93 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB0D26472A8144CC0066FF93 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB6F1B6E2A04702100DF65A0 /* Project object */;
 }
